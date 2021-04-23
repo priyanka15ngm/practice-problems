@@ -1,0 +1,55 @@
+import java.util.*;
+public class Main
+
+{
+    static int fun(int n){
+        while(n>9){
+            	    int sum = 0;
+            	    while(n>0){
+                    	    int rem = n % 10;
+                    	    sum = sum + rem;
+                    	    n=n/10;
+                	    }
+            	   n=sum;
+	             }
+	
+    return n;
+	}
+    
+    static void motivation(char[] arr){
+        boolean ans = false;
+        for(int i =0 ; i< arr.length ; i++){
+            if(arr[i]=='a' || arr[i] =='e' || arr[i] =='i' || arr[i] =='o'
+            || arr[i] =='u')
+            {
+                int index = i*5;
+                int n = index*(index+1)/2;
+                int sd = fun(n);
+                char c=(char)(sd+'0'); 
+                
+                arr[i] = c;
+                ans = true;
+            }
+        }
+        if(ans==false){
+            System.out.print("-1");
+        }
+    
+        else{
+            for(char ch : arr){
+    		    System.out.print(ch);
+    	     	}
+        }
+}
+    
+        
+	public static void main(String[] args) {
+		Scanner sc =  new Scanner(System.in);
+		String str = sc.nextLine();
+		str.toLowerCase();
+		char[] arr  = str.toCharArray();
+        motivation(arr);
+
+		
+	}
+}

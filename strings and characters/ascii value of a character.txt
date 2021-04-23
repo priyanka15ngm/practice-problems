@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+   
+    
+	static int asciivalue( char cc){
+	   
+	    int asciians = (int)cc;
+	    return asciians;
+	   
+	    
+	}
+
+	public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);
+
+	 char cc =sc.next().charAt(0);
+	  
+	  System.out.println(asciivalue(cc));
+	  
+	 
+	}
+}

@@ -1,0 +1,56 @@
+import java.util.*;
+public class Main
+{
+   
+    
+	static int freq(String str , char cc){
+	   
+	    
+	    boolean ans = false;
+	   int n=0;
+	   char ch;
+	    for(int j=0;j<str.length();j++)
+     	{
+	    ch=str.charAt(j);	
+	   if(ch==cc)
+	   {
+            n++;
+            ans = true;
+           
+            
+	  
+	    
+	    
+	    
+	    
+	  }
+	}
+	 
+	 
+	
+	if(ans == false){
+	    return -1;
+	}
+	
+    return n;	 
+	    
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);
+	 String str = sc.nextLine();
+	 char cc =sc.next().charAt(0);
+	  
+	  System.out.println(freq(str,cc));
+	  
+	 
+	}
+}

@@ -1,0 +1,37 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	
+		String str = "test string";
+	     HashMap<Character, Integer> count = new HashMap<>();
+	     for (int i = 0; i < str.length(); i++) {
+            if (!count.containsKey(str.charAt(i)))
+                count.put(str.charAt(i), 1);
+            else
+                count.put(str.charAt(i),count.get(str.charAt(i)) + 1);
+        }
+        
+        //count.entrySet() ====== full set
+        //trsvesering with the help of e
+          for (Map.Entry e : count.entrySet()) {
+            char key = (char)e.getKey();
+            int value = ((int)e.getValue());
+            // System.out.println("Key: " + e.getKey()
+            //                   + " Value: " + e.getValue());
+ 
+            if (value > 1)
+                System.out.println(key
+                                   + ", count = " + value);
+        }
+            
+	}
+}

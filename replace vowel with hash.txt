@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+    
+    static void vowelfun( String str){
+        char[] vowels ={'a','e','i','o','u'};
+        for(char vow : vowels){
+		   str = str.replace(vow,'#');
+		}
+		System.out.println(str);
+	}
+    
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+// 		vowelfun(str);
+        Main obj = new Main();
+        obj.vowelfun(str);
+	
+		
+}
+
+}
